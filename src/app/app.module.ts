@@ -10,6 +10,7 @@ import { ContactsComponent } from './pages/contacts.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AlbumComponent } from './pages/album.component'; // <== NEW
+import { PostsComponent } from './pages/posts.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { AlbumComponent } from './pages/album.component'; // <== NEW
       { path: 'catalog', component: CatalogComponent },
       { path: 'catalog/:albumId', component: AlbumComponent }, // <== NEW
       { path: 'contacts', component: ContactsComponent },
+      { path: 'posts', component: PostsComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ]),
   ],
@@ -31,6 +33,7 @@ import { AlbumComponent } from './pages/album.component'; // <== NEW
     LoginComponent,
     AlbumComponent, // <== NEW
     ContactsComponent,
+    PostsComponent,
   ],
   bootstrap: [AppComponent],
 })

@@ -7,9 +7,9 @@ import { Photo } from '../model/photo';
   selector: 'app-album',
   template: `
     <h1>Photos</h1>
-    <li *ngFor="let photo of photos">
-      <pre>{{photos | json}}</pre>
-    </li>
+    <img *ngFor="let photo of photos" [src]="photo.thumbnailUrl"/>
+    <hr/>
+    <button routerLink="/catalog">Back</button>
   `,
 })
 export class AlbumComponent {
