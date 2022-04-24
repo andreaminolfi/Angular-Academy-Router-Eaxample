@@ -6,7 +6,7 @@ import { Posts } from '../model/posts';
   selector: 'app-posts',
   template: `
     <h1>Posts</h1>
-    <li *ngFor="let p of posts">
+    <li *ngFor="let p of posts" [routerLink]="'posts/' + p.id">
       {{p.title}}
     </li>
   `,
