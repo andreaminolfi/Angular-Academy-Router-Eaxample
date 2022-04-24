@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { Album } from '../model/album';
 
 @Component({
-  selector: 'catalog',
+  selector: 'app-catalog',
   template: `
     <h1>Albums</h1>
-    <li *ngFor="let album of albums" [routerLink]="'catalog/' + album.id">
-      {{album.title}}
+    <li *ngFor="let album of albums" [routerLink]="'/catalog/' + album.id">
+      {{ album.title }}
     </li>
   `,
 })
