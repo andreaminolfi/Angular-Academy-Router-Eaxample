@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AlbumComponent } from './pages/album.component'; // <== NEW
 import { PostsComponent } from './pages/posts.component';
+import { CommentsComponent } from './pages/comments.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { PostsComponent } from './pages/posts.component';
       { path: 'catalog/:albumId', component: AlbumComponent }, // <== NEW
       { path: 'contacts', component: ContactsComponent },
       { path: 'posts', component: PostsComponent },
+      { path: 'posts/:postId', component: CommentsComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ]),
   ],
@@ -34,6 +36,7 @@ import { PostsComponent } from './pages/posts.component';
     AlbumComponent, // <== NEW
     ContactsComponent,
     PostsComponent,
+    CommentsComponent,
   ],
   bootstrap: [AppComponent],
 })
