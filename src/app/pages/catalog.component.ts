@@ -6,7 +6,7 @@ import { Album } from '../model/album';
   selector: 'catalog',
   template: `
     <h1>Albums</h1>
-    <li *ngFor="let album of albums">
+    <li *ngFor="let album of albums" [routerLink]="'catalog/' + album.id">
       {{album.title}}
     </li>
   `,

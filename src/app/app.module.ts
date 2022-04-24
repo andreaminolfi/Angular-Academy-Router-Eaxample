@@ -9,6 +9,7 @@ import { CatalogComponent } from './pages/catalog.component';
 import { ContactsComponent } from './pages/contacts.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { AlbumComponent } from './pages/album.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'login', component: LoginComponent },
       { path: 'contacts', component: ContactsComponent },
       { path: 'catalog', component: CatalogComponent },
+      { path: 'catalog/:albumId', component: AlbumComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ]),
   ],
@@ -28,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ContactsComponent,
     CatalogComponent,
+    AlbumComponent,
   ],
   bootstrap: [AppComponent],
 })
