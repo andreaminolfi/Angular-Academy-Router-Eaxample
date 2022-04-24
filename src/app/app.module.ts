@@ -24,7 +24,7 @@ import { CommentsComponent } from './pages/comments.component';
       { path: 'catalog/:albumId', component: AlbumComponent }, // <== NEW
       { path: 'contacts', component: ContactsComponent },
       { path: 'posts', component: PostsComponent },
-      { path: 'posts/:postId', component: CommentsComponent },
+      { path: 'posts/:id', component: CommentsComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ]),
   ],
